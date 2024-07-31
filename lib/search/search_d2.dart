@@ -28,7 +28,7 @@ class _SearchPageDepth2State extends State<SearchPageDepth2>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Search Depth 3'),
+            const Text('Search Depth 2'),
             const Text(
               'You have pushed the button this many times:',
             ),

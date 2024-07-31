@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:persistent_navigation_drawer/accessibility/accessibility.dart';
 import 'package:persistent_navigation_drawer/favourites/favourites.dart';
+import 'package:persistent_navigation_drawer/favourites/favourites_d1.dart';
 import 'package:persistent_navigation_drawer/home/home.dart';
 import 'package:persistent_navigation_drawer/home/home_d1.dart';
 import 'package:persistent_navigation_drawer/home/home_d2.dart';
@@ -146,7 +147,7 @@ class AppNavigation {
                         path: 'favouritesDepth1',
                         name: 'FavouritesDepth1',
                         builder: (context, state) {
-                          return SearchPageDepth1(
+                          return FavouritesPageDepth1(
                             key: state.pageKey,
                           );
                         },
