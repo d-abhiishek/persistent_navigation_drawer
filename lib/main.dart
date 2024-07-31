@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'favourites.dart';
-import 'search.dart';
-import 'accessibility.dart';
-import 'home.dart';
+import 'favourites/favourites.dart';
+import 'search/search.dart';
+import 'accessibility/accessibility.dart';
+import 'home/home.dart';
 
 void main() {
   runApp(const MyApp());
