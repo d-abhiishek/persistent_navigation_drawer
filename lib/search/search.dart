@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -36,6 +37,13 @@ class _SearchPageState extends State<SearchPage>{
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                context.goNamed("SearchDepth1");
+              },
+              child: const Text('Go to Search Depth 1'),
+            )
           ],
         ),
       ),

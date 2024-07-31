@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePageDepth1 extends StatefulWidget {
   const HomePageDepth1({super.key});
@@ -36,6 +37,13 @@ class _HomePageDepth1State extends State<HomePageDepth1>{
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                context.goNamed("HomeDepth2");
+              },
+              child: const Text('Go to Home Depth 2'),
+            )
           ],
         ),
       ),

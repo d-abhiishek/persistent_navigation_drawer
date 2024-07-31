@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class FavouritesPage extends StatefulWidget {
   const FavouritesPage({super.key});
@@ -35,6 +36,13 @@ class _FavouritesPageState extends State<FavouritesPage>{
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                context.goNamed("FavouritesDepth1");
+              },
+              child: const Text('Go to Favourites Depth 1'),
             ),
           ],
         ),
