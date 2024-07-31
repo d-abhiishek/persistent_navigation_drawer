@@ -36,6 +36,13 @@ class _SearchPageDepth2State extends State<SearchPageDepth2>{
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to Search Depth 1'),
+            )
           ],
         ),
       ),

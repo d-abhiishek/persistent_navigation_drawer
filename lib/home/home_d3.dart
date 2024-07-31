@@ -36,6 +36,13 @@ class _HomePageDepth3State extends State<HomePageDepth3>{
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to Home Depth 2'),
+            )
           ],
         ),
       ),

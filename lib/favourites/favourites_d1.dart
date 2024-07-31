@@ -36,6 +36,13 @@ class _FavouritesPageDepth1State extends State<FavouritesPageDepth1>{
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to Favourites'),
+            )
           ],
         ),
       ),

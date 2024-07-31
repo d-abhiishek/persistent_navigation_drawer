@@ -43,6 +43,13 @@ class _HomePageDepth2State extends State<HomePageDepth2>{
                 context.goNamed("HomeDepth3");
               },
               child: const Text('Go to Home Depth 3'),
+            ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to Home Depth 1'),
             )
           ],
         ),

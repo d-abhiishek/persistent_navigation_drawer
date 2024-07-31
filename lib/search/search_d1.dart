@@ -43,6 +43,13 @@ class _SearchPageDepth1State extends State<SearchPageDepth1>{
                 context.goNamed("SearchDepth2");
               },
               child: const Text('Go to Search Depth 2'),
+            ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to Search'),
             )
           ],
         ),
