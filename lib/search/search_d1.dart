@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SearchPageDepth1 extends StatefulWidget {
-  SearchPageDepth1({super.key});
+  const SearchPageDepth1({super.key});
 
   @override
   State<StatefulWidget> createState() => _SearchPageDepth1State();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePageDepth3 extends StatefulWidget {
-  HomePageDepth3({super.key});
+  const HomePageDepth3({super.key});
 
   @override
   State<StatefulWidget> createState() => _HomePageDepth3State();

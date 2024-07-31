@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FavouritesPageDepth1 extends StatefulWidget {
-  FavouritesPageDepth1({super.key});
+  const FavouritesPageDepth1({super.key});
 
   @override
   State<StatefulWidget> createState() => _FavouritesPageDepth1State();

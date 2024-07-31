@@ -38,10 +38,10 @@ class _MainWrapperState extends State<MainWrapper> {
   ];
 
   final List<Widget> pages = [
-    HomePage(),
-    SearchPage(),
-    FavouritesPage(),
-    AccessibilityPage(),
+    const HomePage(),
+    const SearchPage(),
+    const FavouritesPage(),
+    const AccessibilityPage(),
   ];
 
   @override
@@ -53,12 +53,12 @@ class _MainWrapperState extends State<MainWrapper> {
         title: Text(widget.title),
       ),
       drawer: NavigationDrawer(
-        children: destinations,
         selectedIndex: currentDestinationIndex,
         onDestinationSelected: (index) {
           setState(() => currentDestinationIndex = index);
           scaffoldKey.currentState!.closeDrawer();
         },
+        children: destinations,
       ),
       body: pages[currentDestinationIndex],
     );

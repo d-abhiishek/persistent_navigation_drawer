@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AccessibilityPage extends StatefulWidget {
-  AccessibilityPage({super.key});
+  const AccessibilityPage({super.key});
 
   @override
   State<StatefulWidget> createState() => _AccessibilityPageState();

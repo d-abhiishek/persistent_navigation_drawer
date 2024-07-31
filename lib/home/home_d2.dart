@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePageDepth2 extends StatefulWidget {
-  HomePageDepth2({super.key});
+  const HomePageDepth2({super.key});
 
   @override
   State<StatefulWidget> createState() => _HomePageDepth2State();
