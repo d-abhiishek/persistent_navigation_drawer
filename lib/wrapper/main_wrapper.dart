@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../accessibility/accessibility.dart';
 import '../favourites/favourites.dart';
@@ -6,9 +7,11 @@ import '../home/home.dart';
 import '../search/search.dart';
 
 class MainWrapper extends StatefulWidget {
-  const MainWrapper({super.key, required this.title});
+  const MainWrapper({super.key, required this.title, required this.navigationShell});
 
   final String title;
+
+  final StatefulNavigationShell navigationShell;
 
   @override
   State<MainWrapper> createState() => _MainWrapperState();
@@ -17,6 +20,13 @@ class MainWrapper extends StatefulWidget {
 class _MainWrapperState extends State<MainWrapper> {
   int currentDestinationIndex = 0;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  void _goToBranch(int index) {
+    widget.navigationShell.goBranch(
+        index,
+      initialLocation: index == widget.navigationShell.currentIndex,
+    );
+  }
 
   final destinations = const [
     NavigationDrawerDestination(
@@ -56,11 +66,12 @@ class _MainWrapperState extends State<MainWrapper> {
         selectedIndex: currentDestinationIndex,
         onDestinationSelected: (index) {
           setState(() => currentDestinationIndex = index);
+          _goToBranch(currentDestinationIndex);
           scaffoldKey.currentState!.closeDrawer();
         },
         children: destinations,
       ),
-      body: pages[currentDestinationIndex],
+      body: widget.navigationShell,
     );
   }
 }
