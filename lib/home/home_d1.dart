@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class AccessibilityPage extends StatefulWidget {
-  AccessibilityPage({super.key});
+class HomePageDepth1 extends StatefulWidget {
+  const HomePageDepth1({super.key});
 
   @override
-  State<StatefulWidget> createState() => _AccessibilityPageState();
+  State<StatefulWidget> createState() => _HomePageDepth1State();
 }
 
-class _AccessibilityPageState extends State<AccessibilityPage>{
+class _HomePageDepth1State extends State<HomePageDepth1>{
   int _counter = 0;
 
   void _incrementCounter() {
@@ -29,7 +29,7 @@ class _AccessibilityPageState extends State<AccessibilityPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Accessibility'),
+            const Text('Home Depth 1'),
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -37,6 +37,20 @@ class _AccessibilityPageState extends State<AccessibilityPage>{
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                context.goNamed("HomeDepth2");
+              },
+              child: const Text('Go to Home Depth 2'),
+            ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to Home'),
+            )
           ],
         ),
       ),

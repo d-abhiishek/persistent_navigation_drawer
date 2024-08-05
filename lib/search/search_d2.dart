@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FavouritesPage extends StatefulWidget {
-  FavouritesPage({super.key});
+class SearchPageDepth2 extends StatefulWidget {
+  const SearchPageDepth2({super.key});
 
   @override
-  State<StatefulWidget> createState() => _FavouritesPageState();
+  State<StatefulWidget> createState() => _SearchPageDepth2State();
 }
 
-class _FavouritesPageState extends State<FavouritesPage>{
+class _SearchPageDepth2State extends State<SearchPageDepth2>{
   int _counter = 0;
 
   void _incrementCounter() {
@@ -29,7 +28,7 @@ class _FavouritesPageState extends State<FavouritesPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Favourites'),
+            const Text('Search Depth 2'),
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -37,6 +36,13 @@ class _FavouritesPageState extends State<FavouritesPage>{
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to Search Depth 1'),
+            )
           ],
         ),
       ),

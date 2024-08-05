@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({super.key});
+class FavouritesPage extends StatefulWidget {
+  const FavouritesPage({super.key});
 
   @override
-  State<StatefulWidget> createState() => _HomePageState();
+  State<StatefulWidget> createState() => _FavouritesPageState();
 }
 
-class _HomePageState extends State<HomePage>{
+class _FavouritesPageState extends State<FavouritesPage>{
   int _counter = 0;
 
   void _incrementCounter() {
@@ -29,13 +29,20 @@ class _HomePageState extends State<HomePage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Home'),
+            const Text('Favourites'),
             const Text(
               'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            MaterialButton(
+              color: Colors.blue,
+              onPressed: () {
+                context.goNamed("FavouritesDepth1");
+              },
+              child: const Text('Go to Favourites Depth 1'),
             ),
           ],
         ),

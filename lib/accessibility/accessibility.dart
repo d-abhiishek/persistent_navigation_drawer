@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SearchPage extends StatefulWidget {
-  SearchPage({super.key});
+class AccessibilityPage extends StatefulWidget {
+  const AccessibilityPage({super.key});
 
   @override
-  State<StatefulWidget> createState() => _SearchPageState();
-  }
+  State<StatefulWidget> createState() => _AccessibilityPageState();
+}
 
-class _SearchPageState extends State<SearchPage>{
+class _AccessibilityPageState extends State<AccessibilityPage>{
   int _counter = 0;
 
   void _incrementCounter() {
@@ -29,7 +28,7 @@ class _SearchPageState extends State<SearchPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('Search'),
+            const Text('Accessibility'),
             const Text(
               'You have pushed the button this many times:',
             ),
